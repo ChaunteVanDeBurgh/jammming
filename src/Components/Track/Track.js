@@ -1,9 +1,10 @@
-import React form 'react';
+import React from 'react';
 import './Track.css';
 
 class Track extends React.Component {
 	renderAction () {
-		let trackAction
+		const trackAction = '+';
+		const isRemoval = true;
 		if (isRemoval) {
 			trackAction = '+';
 		} else {
@@ -14,10 +15,10 @@ class Track extends React.Component {
 		return (
 			<div className="Track">
   			<div className="Track-information">
-    			<h3>// track name will go here </h3>
-    			<p>// track artist will go here | track album will go here </p>
+    			<h3>{this.props.track[0].name}</h3>
+    			<p>{this.props.track[1].artist} | {this.props.track[2].album} </p>
   			</div>
- 				<a className="Track-action">{trackAction}</a>
+ 				<a className="Track-action">{this.trackAction}</a>
 			</div>
 		)
 	}
