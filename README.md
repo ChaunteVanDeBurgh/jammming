@@ -6,7 +6,7 @@ Jamming is a Web App that calls the spotify API.
 
 This is the capstone project for a Codecademy 8 week intensive webinar. 
 
-No react code was provided to the developer by Codecademy.
+No JSX or react code was provided to the developer by Codecademy.
 
 ## Available Scripts
 
