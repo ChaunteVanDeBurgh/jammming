@@ -7,7 +7,13 @@ import Playlist from '../Playlist/Playlist';
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {searchResults: [{name: 'God Dream'},{artist: 'Chaunte'},{album: 'The Myth of God'},{id: '1'}]}
+		this.state = {
+			searchResults: [{name: 'God Dream'},{artist: 'Chaunte'},{album: 'The Myth of God'},{id: '1'}],
+			playListName: 'Favorites',
+			playListTracks: [{name: 'song1', artist: 'artist1', album: 'album1', id: 1},
+				{name: 'song2', artist: 'artist2', album: 'album2', id: 2},
+				{name: 'song3', artist: 'artist3', album: 'album3', id: 3}]
+		}
 	}
 	render() {
 		return (
