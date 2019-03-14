@@ -14,13 +14,23 @@ class App extends React.Component {
 				{name: 'song2', artist: 'artist2', album: 'album2', id: 2},
 				{name: 'song3', artist: 'artist3', album: 'album3', id: 3}]
 		}
+		this.addTrack = this.addTrack.bind(this);
 	}
+
+	addTrack(track) {
+		if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
+  		return;
+		}
+		const newPlayList = this.state.playListTracks.push(track);
+		this.setState({playListTracks: newPlayList});
+	}
+
 	render() {
 		return (
 			<div>
 			  <h1>Ja<span className="highlight">mmm</span>ing</h1>
 			  <div className="App">
-			    // Add a SearchBar component
+			    {/* Add a SearchBar component */}
 			    <div className="App-playlist">
 			    	<SearchResults searchResults={this.state.searchResults} />
 			    	<Playlist playListName={this.state.playListName} playListTracks={this.state.playListTracks} />
